@@ -1,0 +1,9 @@
+{
+  "status": "OK",
+  "count": 3,
+  "users": [
+    { "name": "Yamada", "age": 26 },
+    { "name": "Tanaka", "age": 32 },
+    { "name": "Suzuki", "age": 45 }
+  ]
+}

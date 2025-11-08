@@ -1,0 +1,19 @@
+[
+    {
+        "status": "OK",
+        "count": 3,
+        "users": [
+            { "name": "Yamada", "age": 26 },
+            { "name": "Tanaka", "age": 32 },
+            { "name": "Suzuki", "age": 45 }
+        ]
+    },
+    {
+        "status": "NG",
+        "count": 1,
+        "users": [
+            { "name": "Take", "age": 40 },
+            { "name": "Yoshi", "age": 21 }
+        ]
+    }
+]
