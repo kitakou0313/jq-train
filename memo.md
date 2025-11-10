@@ -128,7 +128,48 @@ cat array.json | jq '.[] | select(.status == "NG")'
 cat obj.json | jq '.. | .name? | select(. != null )'
 
 // 特定の名前のキーへのパスを表示する方法
-
+cat obj.json | jq 'paths(scalars) as $p | select($p[-1] == "keyname") | $p'
+// paths 関数で全てのパスが得られる
+// scalars builtinフィルターでscalarの値のパスのみを抽出する
+//   objへのパスなどは含まない
+// 最後の名前が指定したキー名かで判定すれば良い
+cat obj.json | jq 'paths(scalars) as $p | $p'
+[
+  "status"
+]
+[
+  "count"
+]
+[
+  "users",
+  0,
+  "name"
+]
+[
+  "users",
+  0,
+  "age"
+]
+[
+  "users",
+  1,
+  "name"
+]
+[
+  "users",
+  1,
+  "age"
+]
+[
+  "users",
+  2,
+  "name"
+]
+[
+  "users",
+  2,
+  "age"
+]
 ```
 
 ## ToDo
